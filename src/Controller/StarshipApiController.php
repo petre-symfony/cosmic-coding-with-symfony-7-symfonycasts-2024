@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class StarshipApiController extends AbstractController {
 	#[Route('/api/starships')]
 	public function getCollection(LoggerInterface $logger): Response {
-		dd($logger);
+		$logger->info('Starship collection retrieved');
 		$starships = [
 			new Starship(
 				1,
