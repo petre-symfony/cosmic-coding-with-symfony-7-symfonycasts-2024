@@ -31,5 +31,5 @@ class Starship {
 	public function getStatus(): string {
 		return $this->status;
 	}
-	
+
 }
