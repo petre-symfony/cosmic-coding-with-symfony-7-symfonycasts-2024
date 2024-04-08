@@ -11,8 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class StarshipApiController extends AbstractController {
 	#[Route('/api/starships')]
-	public function getCollection(LoggerInterface $logger, StarshipRepository $repository): Response {
-		$logger->info('Starship collection retrieved');
+	public function getCollection(StarshipRepository $repository): Response {
 		$starships = $repository->findAll();
 		return $this->json($starships);
 	}
