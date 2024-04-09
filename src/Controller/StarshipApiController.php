@@ -16,7 +16,9 @@ class StarshipApiController extends AbstractController {
 	}
 
 	#[Route('/{id<\d+>}', methods: ['GET'])]
-	public function get($id): Response {
-		dd($id);
+	public function get($id, StarshipRepository $repository): Response {
+		$starship = $repository->find($id);
+
+		return $this->json($starship);
 	}
 }
