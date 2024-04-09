@@ -20,8 +20,9 @@
     <tr>
       <th>Name</th>
       <td>
-        <a href="{{ path('app_starship_show') }}"></a>
-        {{ myShip.name }}
+        <a href="{{ path('app_starship_show', {id: myShip.id}) }}">
+          {{ myShip.name }}
+        </a>
       </td>
     </tr>
     <tr>
