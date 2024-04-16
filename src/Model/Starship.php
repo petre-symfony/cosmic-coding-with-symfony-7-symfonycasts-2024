@@ -32,4 +32,7 @@ class Starship {
 		return $this->status;
 	}
 
+	public function getStatusString() {
+		return $this->status->value;
+	}
 }
